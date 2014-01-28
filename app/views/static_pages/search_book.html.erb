@@ -1,0 +1,31 @@
+  <div class="panel-heading"><h4><%=@book["title"]%></h4></div>
+<div class="panel-body">	
+
+<p>
+	<b>Brief Synopsis: </b><%=@book["briefSynopsis"]%>
+</p>
+
+<p>
+	<b>Complete Synopsis:</b> <%=@book["completeSynopsis"]%></p>
+<hr>
+
+<b>Book Quality: </b><%=@book["quality"]%>
+    <br>
+<b>ISBN-13: </b><%=@book["isbn13"]%>
+    <br>
+<b>Publisher: </b><%=@book["publisher"]%>
+    <br>
+<b>Date of Addition: </b><%=@book["publishDate"]%>
+    <br>
+<b>Copyright Date: </b><%=@book["copyright"]%>
+    <br>
+<b>Copyrighted By: </b><%=@book["author"][0]%>
+    <br>
+<!-- <b>Adult content: </b><%=@book["briefSynopsis"]%>
+    <br> -->
+<b>Language: </b><%=@book["language"]%>
+   <br>
+<b>Submitted By: </b> Bookshare Staff
+    <br>
+
+</div>

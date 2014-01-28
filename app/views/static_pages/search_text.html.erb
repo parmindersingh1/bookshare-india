@@ -1,0 +1,22 @@
+  <div class="panel-heading"><h4>Search Result for "<%=@search_txt%>"</h4></div>
+<div class="panel-body">
+	
+	<%@searched_result.each do |result|%>
+	<h1><a href="/static_pages/search_book?id=<%=result['id']%>"><%=result["title"]%></a></h1>
+<p class="lead">
+	by
+	<a href="/static_pages/search_book?key=<%=result['author'][0]%>"><%=result["author"][0]%></a>
+	<!-- <a href="index.php">Start Bootstrap</a> -->
+</p>
+<hr>
+<p>
+	<span class="glyphicon glyphicon-time"></span>
+	Published by <%=result["publisher"]%> 
+</p>
+
+<p><%=result["briefSynopsis"]%></p>
+
+<hr>
+<%end%>
+<%= will_paginate(@searched_result) %>
+</div>

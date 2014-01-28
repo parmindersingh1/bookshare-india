@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookshareIndia</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'layouts/dashboard_header'%>
+	
+	<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+           <div class="well">
+            <!-- blog entry -->
+            <h1 id="logo"><a href="#"><img src="/assets/share.png" width="278"></a></h1>
+            <p class="lead"><a href="index.html">An Accessible Online Library
+                for people with print disabilities</a></p>                
+            </div>
+
+      <div id="content" class="panel panel-default">
+	     <%= yield %>
+	   </div><!--content-->
+
+        </div>
+        
+		<%= render 'layouts/sidebar'%>
+
+    </div><!--row -->
+
+    <%= render 'layouts/footer'%>
+
+</div><!-- /.container -->
+<div class="modal"><!-- Place at bottom of page --></div>
+
+</body>
+</html>
